@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Política de privacidad — JARVIS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #050505; --panel: #0b0c10; --hairline: rgba(255,255,255,0.08);
+    --text: #f2f4f8; --muted: #98a1b0; --accent: #34d399; --accent-ink: #052e22;
+    --orb1: rgba(124,103,255,0.18); --orb2: rgba(52,211,153,0.11); --orb3: rgba(56,132,255,0.09);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; min-height: 100dvh;
+    font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .glow {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(55% 42% at 10% 0%, var(--orb1), transparent 70%),
+      radial-gradient(50% 38% at 92% 8%, var(--orb2), transparent 70%),
+      radial-gradient(60% 50% at 50% 100%, var(--orb3), transparent 74%);
+  }
+  .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto;
+          padding: clamp(1.2rem, 5vw, 3rem) clamp(1.1rem, 5vw, 2.5rem) 4rem; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: rgba(52,211,153,0.3); color: var(--text); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  h1 { margin: 2.4rem 0 1rem; font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 800;
+       letter-spacing: -.03em; line-height: 1.08; }
+  h2 { margin: 2rem 0 .6rem; font-size: 1.12rem; font-weight: 700; letter-spacing: -.01em; }
+  p, li { color: var(--muted); font-size: .95rem; line-height: 1.65; }
+  ul { padding-left: 1.1rem; }
+  strong { color: var(--text); font-weight: 600; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .14em;
+          text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--hairline);
+          padding-bottom: 1rem; }
+  .back { display: inline-flex; align-items: center; gap: .45rem; margin-top: 2.6rem;
+          padding: .55rem .95rem; border-radius: 999px; font-size: .8rem; font-weight: 600;
+          border: 1px solid var(--hairline); transition: color .25s, border-color .25s; }
+  .back:hover { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 50%, transparent); }
+
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<main class="wrap">
+  <a href="./" class="back">← Volver</a>
+  <p class="meta">Última actualización · 10 de septiembre de 2026</p>
+  <h1>Política de privacidad</h1>
+<p><strong>JARVIS es un asistente que se ejecuta en tu propio equipo.</strong>
+No tiene servidor central, ni cuenta obligatoria, ni empresa que recopile tus datos.
+Esta política describe qué información existe, dónde vive y cuándo (y por qué) sale
+de tu máquina.</p>
+
+<h2>1. Qué se guarda en tu equipo</h2>
+<p>Todo lo que JARVIS recuerda y usa se almacena en tu máquina, en una carpeta
+llamada <strong>Open.Jarvis</strong> dentro de tus datos de usuario:</p>
+<ul>
+  <li>Tu configuración (preferencias, voz, modelo, plug-ins).</li>
+  <li>Tu memoria a medio y largo plazo (conversaciones y hechos que registras).</li>
+  <li>Los tokens de acceso de las cuentas que <em>tú</em> decides conectar
+      (Google, Spotify). Cada token pertenece a tu cuenta y a tu instalación.</li>
+  <li>Los registros de actividad y de errores necesarios para funcionar.</li>
+</ul>
+<p>Nada de esto se sube a ningún lugar por defecto. Si desinstalas o borras esa
+carpeta, estos datos desaparecen.</p>
+
+<h2>2. Cuentas conectadas (Gmail, Calendar, YouTube, Spotify)</h2>
+<p>Conectar una cuenta es <strong>siempre opcional y explícito</strong>. Cuando
+vinculas una cuenta:</p>
+<ul>
+  <li>Se abre la página oficial de autorización (Google o Spotify) y eres tú quien
+      aprueba con tu propia cuenta.</li>
+  <li>La aplicación que te pide permiso es el cliente de JARVIS (estado «en
+      pruebas» o «sin verificar» en Google). Los permisos pedidos son de
+      <strong>solo lectura</strong>: leer tu correo, leer tu calendario y buscar
+      en YouTube.</li>
+  <li>El acceso concedido pertenece a <strong>tu cuenta y a tu equipo</strong>;
+      el autor de JARVIS no puede leerla ni acceder a ella.</li>
+  <li>Puedes revocar el acceso en cualquier momento desde la propia página de
+      permisos de Google o Spotify, o usando el comando integrado de JARVIS
+      para desconectar la cuenta.</li>
+</ul>
+
+<h2>3. Sitio web, descargas y actualizaciones</h2>
+<p>La página de presentación y el paquete de instalación se sirven desde
+<strong>GitHub Pages</strong>. Al visitarla o descargar el archivo, tu dirección IP y
+los datos técnicos habituales pueden quedar en los registros del propio GitHub, al
+igual que en cualquier sitio web. JARVIS consulta un pequeño archivo
+(<code>manifest.json</code>) de esa misma página para saber si existe una versión
+nueva; la instalación de actualizaciones la decides tú.</p>
+
+<h2>4. Chat en línea (si el autor publica una URL)</h2>
+<p>Si el autor de JARVIS publica un enlace para usar el chat desde Internet, esa URL
+es un <strong>túnel efímero</strong> que conecta con tu instalación local, y suele
+desaparecer al reiniciarse el equipo. Lo que escribas en ese chat viaja cifrado por
+ese túnel hasta JARVIS y se guarda igual que el resto, en tu equipo. No se garantiza
+que ese enlace esté siempre activo.</p>
+
+<h2>5. Qué NO hacemos</h2>
+<ul>
+  <li>No vendemos, alquilamos ni compartimos tus datos con terceros.</li>
+  <li>No mostramos publicidad ni instalamos rastreadores.</li>
+  <li>No enviamos telemetría ni estadísticas de uso.</li>
+  <li>No guardamos contraseñas: los accesos usan tokens oficiales de Google y Spotify.</li>
+</ul>
+
+<h2>6. Eliminación de datos</h2>
+<p>Borra la carpeta <strong>Open.Jarvis</strong> de tu equipo (o desinstala JARVIS)
+para eliminar configuración, memoria y tokens locales. Para las cuentas conectadas,
+revoca el acceso desde la página de permisos de Google o Spotify.</p>
+
+<h2>7. Cambios en esta política</h2>
+<p>Si JARVIS o esta política cambian, la versión vigente se publica al pie de la
+página de presentación. El uso de JARVIS implica aceptar esta política en su
+versión vigente.</p>
+  <a href="./" class="back">← Volver a JARVIS</a>
+</main>
+</body>
+</html>
